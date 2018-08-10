@@ -8,6 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "delete:conf": "rm -rf /c/Users/sebas/.config/configstore/@google-cloud/functions-emulator/",
+    "functions:local": "npm run delete:conf && firebase serve --only functions",
     "ssr:serve": "ng build --prod && ng run ssr-starter:server && cp -a functions/dist/browser/. public/ && mv public/index.html public/index2.html && firebase serve --only functions,hosting",
     "ssr:deploy": "ng build --prod && ng run ssr-starter:server && cp -a functions/dist/browser/. public/ && mv public/index.html public/index2.html && firebase deploy --only functions,hosting"
   },

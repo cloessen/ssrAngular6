@@ -6,7 +6,8 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [{
+    "rewrites": [
+      {
         "source": "**/*.@(css|js)",
         "destination": "/index2.html"
       },
@@ -15,5 +16,8 @@
         "function": "ssr"
       }
     ]
+  },
+  "storage": {
+    "rules": "storage.rules"
   }
 }

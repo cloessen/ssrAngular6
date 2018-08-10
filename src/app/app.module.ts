@@ -18,6 +18,7 @@ import {
 import { CKEditorModule } from 'ngx-ckeditor';
 import { KeepHtmlPipe } from './keep-html.pipe';
 import { FormsModule } from '../../node_modules/@angular/forms';
+import { CkeditorConfigService } from './ckeditor-config.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { FormsModule } from '../../node_modules/@angular/forms';
     MatListModule,
     CKEditorModule,
   ],
-  providers: [],
+  providers: [CkeditorConfigService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

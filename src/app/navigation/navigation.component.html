@@ -28,9 +28,14 @@
     </mat-toolbar>
     <H2>leere Startseite</H2>
     <router-outlet></router-outlet>
-    <ck-editor name="editor1"
-               [(ngModel)]="editorValue"
-               language="de"></ck-editor>
+    <div>
+
+      <ck-editor name="editor1"
+                 [(ngModel)]="editorValue"
+                 [config]="myCkeditorConfig"
+                 language="de"
+      ></ck-editor>
+    </div>
 
     <button type="button"
             (click)="showContent()">anzeigen</button>
