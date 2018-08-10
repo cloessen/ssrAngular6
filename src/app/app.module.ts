@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,10 +16,7 @@ import {
   MatIconModule,
   MatListModule,
 } from '@angular/material';
-import { CKEditorModule } from 'ngx-ckeditor';
 import { KeepHtmlPipe } from './keep-html.pipe';
-import { FormsModule } from '../../node_modules/@angular/forms';
-import { CkeditorConfigService } from './ckeditor-config.service';
 
 @NgModule({
   declarations: [
@@ -38,10 +36,9 @@ import { CkeditorConfigService } from './ckeditor-config.service';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule,
-    CKEditorModule,
+    MatListModule
   ],
-  providers: [CkeditorConfigService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

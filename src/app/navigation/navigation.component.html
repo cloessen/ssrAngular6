@@ -29,45 +29,13 @@
     <H2>leere Startseite</H2>
     <router-outlet></router-outlet>
     <div>
-
-      <ck-editor name="editor1"
-                 [(ngModel)]="editorValue"
-                 [config]="myCkeditorConfig"
-                 language="de"
-      ></ck-editor>
+      <h3>Editor goes here...</h3>
     </div>
 
-    <button type="button"
-            (click)="showContent()">anzeigen</button>
-    <div *ngIf="isPreview"
-         [innerHTML]="editorValue | keepHtml"></div>
-    <!-- <div *ngIf="isPreview">{{editorValue}}</div> -->
-    <div>
-      <table border="1"
-             cellpadding="1"
-             cellspacing="1"
-             style="width:500px">
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>
-              <p><span style="font-size:20px">viel Text</span></p>
-            </td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>eine ganz ganz lange zeile&nbsp;</td>
-            <td>mit zwei fast vollen Spalten&nbsp;</td>
-          </tr>
-        </tbody>
-      </table>
+    <span><strong><u>Vorschau:</u></strong></span>
+    <div
+         [innerHTML]="htmlContent | keepHtml">
     </div>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
